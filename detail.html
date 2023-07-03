@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Detail</title>
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .product {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .product-image {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .product-info {
+      flex: 2;
+    }
+
+    .product-code {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .product-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .product-table th,
+    .product-table td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .product-table th {
+      background-color: #f0f0f0;
+    }
+
+    .button-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .button-container a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+      color: #333;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="product">
+      <div class="product-image">
+        <img src="path_to_image.jpg" alt="Product Image">
+      </div>
+      <div class="product-info">
+        <p class="product-code">Product Code: ABC123</p>
+        <h2 class="product-title">Product Name</h2>
+      </div>
+    </div>
+
+    <table class="product-table">
+      <tr>
+        <th>Specification</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Brand</td>
+        <td>Product Brand</td>
+      </tr>
+      <tr>
+        <td>Price</td>
+        <td>$99.99</td>
+      </tr>
+      <tr>
+        <td>Color</td>
+        <td>Product Color</td>
+      </tr>
+      <!-- เพิ่มส่วนอื่นๆของตารางตามที่คุณต้องการ -->
+    </table>
+
+    <div class="button-container">
+      <a href="previous_page.html">ย้อนกลับ</a>
+      <a href="next_page.html">หน้าถัดไป</a>
+    </div>
+  </div>
+</body>
+</html>
