@@ -1,203 +1,148 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JIB - Home</title>
+  <title>Product Page</title>
   <style>
-    /* Reset some default styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
     body {
       font-family: Arial, sans-serif;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    
-    /* Header */
-    header {
-      background-color: #3333ff;
-      color: #fff;
-      padding: 20px;
-    }
-    
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-    
-    /* Navigation */
-    nav {
-      margin-top: 20px;
-    }
-    
-    nav ul {
-      list-style-type: none;
       display: flex;
     }
-    
-    nav ul li {
-      margin-right: 10px;
+
+    .sidebar {
+      width: 200px;
+      background-color: #f0f0f0;
+      padding: 20px;
     }
-    
-    nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      padding: 5px;
-    }
-    
-    /* Main Content */
-    .main-content {
+
+    .product-container {
+      flex-grow: 1;
       display: flex;
       flex-wrap: wrap;
-      margin-top: 20px;
-    }
-    
-    .main-content .column {
-      flex: 1;
-      padding: 10px;
-    }
-    
-    .main-content .column img {
-      width: 100%;
-    }
-    
-    /* Footer */
-    footer {
-      background-color: #3333ff;
-      color: #fff;
+      justify-content: center;
+      align-items: flex-start;
       padding: 20px;
-      margin-top: 20px;
+    }
+
+    .search-container {
+      margin-bottom: 20px;
+      display: flex; /* เพิ่มส่วนนี้เพื่อให้ปุ่มค้นหาแสดงในแนวนอน */
+      align-items: center; /* เพิ่มส่วนนี้เพื่อให้ปุ่มค้นหาแสดงในแนวกึ่งกลางตามความสูงของกล่องข้อความ */
+    }
+
+    .search-input {
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .search-button {
+      padding: 10px;
+      background-color: #ccc;
+      color: #333;
+      border: none;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .category-buttons {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .category-buttons a {
+      display: block;
+      padding: 10px;
+      background-color: #ccc;
+      color: #333;
+      text-decoration: none;
+      margin-bottom: 5px;
+    }
+
+    .product-card {
+      width: 200px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .product-image {
       text-align: center;
+    }
+
+    .product-image img {
+      width: 150px;
+      height: auto;
+    }
+
+    .product-name {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .product-buttons {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .product-buttons a {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #f0f0f0;
+      color: #333;
+      text-decoration: none;
+      margin-right: 5px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1 class="logo">Ecomspax</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+  <div class="sidebar">
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search...">
+      <button class="search-button">Search</button>
     </div>
-  </header>
-
-  <ul class="drop_menu dropdown-menu" id="srh_cate" aria-labelledby="srh_cate">
-    <li class="active list_menu_"><a href="javascript:;" data-source="">หมวดหมู่สินค้า</a></li>
-    <li class=" list_menu_1418"><a href="javascript:;" data-source="1418">APPLE PRODUCTS</a></li>
-    <li class=" list_menu_24"><a href="javascript:;" data-source="24">โน้ตบุ๊ค</a></li>
-    <li class=" list_menu_1400"><a href="javascript:;" data-source="1400">คอมพิวเตอร์เซ็ตสำเร็จรูป</a></li>
-    <li class=" list_menu_1250"><a href="javascript:;" data-source="1250">เดสก์ท็อป / ออลอินวัน / มินิพีซี</a></li>
-    <li class=" list_menu_42"><a href="javascript:;" data-source="42">อุปกรณ์คอมพิวเตอร์</a></li>
-    <li class=" list_menu_58"><a href="javascript:;" data-source="58">หน้าจอคอมพิวเตอร์</a></li>
-    <li class=" list_menu_61"><a href="javascript:;" data-source="61">อุปกรณ์สำหรับเกมเมอร์</a></li>
-    <li class=" list_menu_60"><a href="javascript:;" data-source="60">อุปกรณ์จัดเก็บข้อมูล</a></li>
-    <li class=" list_menu_63"><a href="javascript:;" data-source="63">อุปกรณ์เน็ตเวิร์ค</a></li>
-    <li class=" list_menu_59"><a href="javascript:;" data-source="59">เครื่องพิมพ์ หมึก และสแกนเนอร์</a></li>
-    <li class=" list_menu_1419"><a href="javascript:;" data-source="1419"> คีย์บอร์ด และเมาส์ </a></li>
-    <li class=" list_menu_1377"><a href="javascript:;" data-source="1377">สินค้าสำหรับองค์กร</a></li>
-    <li class=" list_menu_1416"><a href="javascript:;" data-source="1416">ทีวี</a></li>
-    <li class=" list_menu_1423"><a href="javascript:;" data-source="1423">อุปกรณ์สำหรับการประชุม</a></li>
-    <li class=" list_menu_62"><a href="javascript:;" data-source="62">โปรแกรมคอมพิวเตอร์</a></li>
-    <li class=" list_menu_1420"><a href="javascript:;" data-source="1420">ระบบเสียง</a></li>
-    <li class=" list_menu_1393"><a href="javascript:;" data-source="1393">ระบบระบายความร้อน</a></li>
-    <li class=" list_menu_1225"><a href="javascript:;" data-source="1225">อุปกรณ์ตกแต่งเคส</a></li>
-    <li class=" list_menu_1253"><a href="javascript:;" data-source="1253">อุปกรณ์ต่อพ่วง</a></li>
-    <li class=" list_menu_1392"><a href="javascript:;" data-source="1392">คอนเทนต์ ครีเอเตอร์</a></li>
-    <li class=" list_menu_64"><a href="javascript:;" data-source="64">ไลฟ์สไตล์ & แก็ดเจ็ต</a></li>
-    <li class=" list_menu_1"><a href="javascript:;" data-source="1">สมาร์ทโฟน และแท็บเล็ต</a></li>
-    <li class=" list_menu_65"><a href="javascript:;" data-source="65">อุปกรณ์เสริม</a></li>
-    <li class=" list_menu_1256"><a href="javascript:;" data-source="1256">เซิร์ฟเวอร์</a></li>
-    <li class=" list_menu_1252"><a href="javascript:;" data-source="1252">กล้องถ่ายรูป และกล้องติดรถยนต์</a></li>
-    <li class=" list_menu_1379"><a href="javascript:;" data-source="1379">เครื่องใช้ไฟฟ้าภายในบ้าน</a></li>
-    <li class=" list_menu_1406"><a href="javascript:;" data-source="1406">เครื่องใช้สำนักงาน</a></li>
-    <li class=" list_menu_1413"><a href="javascript:;" data-source="1413">ระบบขายหน้าร้าน</a></li>
-     </ul>
-
-     <button class="btn btn-default" type="button" id="serch_btn"><span class="glyphicon glyphicon-search"></span></button>
-</div>
-</div>
-</form>
-<div class="box_search_show">
-<div class="col-md-12" style=" margin: 2px 0;">
-<div class="row">
-<div class="col-md-12 col-sm-12 col-xs-12 pad-0-10 box_type_brand" style=" border-bottom: 1px solid #eee;">
-</div>
-<div class="col-md-5 col-sm-5 col-xs-6 box_type_search">
-<div class="col-md-12 pad-5 key_word_sug">
-</div>
-<div class="bot_search">
-<div class="col-md-12 pad-5-0" style=" border-top: 1px solid #eee; ">
-<label>คำค้นใกล้เคียง</label>
-</div>
-</div>
-</div>
-<div class="col-md-3 col-sm-3 col-xs-6 box_type_search" style=" background-color: #f9f9f9; border-right: none;">
-<div class="col-md-12 pad-5 cate_sug" style="padding:0;"></div>
-<div class="bot_search" style="background-color: #f9f9f9;">
-<div class="col-md-12 pad-5-0" style=" border-top: 1px solid #eee; ">
-<label>ประเภทสินค้า</label>
-</div>
-</div>
-</div>
-<div class="col-md-4 col-sm-4 col-xs-12 box_type_search hidden-xs" style="border-right: none;">
-<div class="col-md-12 pad-5 reg_sug"></div>
- <div class="bot_search">
-<div class="col-md-12 pad-5-0" style=" border-top: 1px solid #eee; ">
-<label>ตัวอย่างสินค้า</label>
-</div>
-</div>
-</div>
-<div class="col-md-12 col-sm-12 col-xs-12 box_type_search pad-0 hidden-xs" style=" border-top: 1px solid #eee; height: 168px;">
-<div class="col-md-12 pad-5 popular_sug" style="height: 127px; overflow-y:scroll;overflow-x:hidden"></div>
-<div class="bot_search" style=" z-index: 5;">
-<div class="col-md-12 pad-5-0" style=" border-top: 1px solid #eee; ">
-<label>สินค้ายอดนิยม</label>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-  
-  <div class="container">
-    <div class="main-content">
-      <div class="column">
-        <img src="image1.jpg" alt="Image 1">
-      </div>
-      <div class="column">
-        <img src="image2.jpg" alt="Image 2">
-      </div>
-      <div class="column">
-        <img src="image3.jpg" alt="Image 3">
-      </div>
-      <div class="column">
-        <img src="image4.jpg" alt="Image 4">
-      </div>
+    <div class="category-buttons">
+      <a href="#">CPU</a>
+      <a href="#">RAM</a>
+      <a href="#">VGA</a>
     </div>
   </div>
-  
-  <footer>
-    <div class="container">
-      <p>Suranaree University of technology</p>
+
+  <div class="product-container">
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image1.jpg" alt="Product Image">
+      </div>
+      <div class="product-name">test1</div>
+      <div class="product-buttons">
+        <a href="#">Detail</a>
+        <a href="#">Add to Cart</a>
+      </div>
     </div>
-  </footer>
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image3.jpg" alt="Product Image">
+      </div>
+      <div class="product-name">test2</div>
+      <div class="product-buttons">
+        <a href="#">Detail</a>
+        <a href="#">Add to Cart</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image4.jpg" alt="Product Image">
+      </div>
+      <div class="product-name">test3</div>
+      <div class="product-buttons">
+        <a href="#">Detail</a>
+        <a href="#">Add to Cart</a>
+      </div>
+    </div>
+
+    <!-- เพิ่มสินค้าอื่นๆลงในตารางตามที่คุณต้องการ -->
+  </div>
 </body>
 </html>
