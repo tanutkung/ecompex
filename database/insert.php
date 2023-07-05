@@ -12,8 +12,13 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO customer (cus_user, cus_pass)
-VALUES ('John3', '12345')";
+$users = $_POST['username'];
+$pass = $_POST['password'];
+$email = $_POST['email'];
+
+$sql = "INSERT INTO users (username, pass, email)
+VALUES ('$users', '$pass', '$email')";
+
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
